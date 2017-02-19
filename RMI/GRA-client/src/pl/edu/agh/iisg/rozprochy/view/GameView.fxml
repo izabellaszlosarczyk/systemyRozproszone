@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.iisg.rozprochy.controller.GameController">
+   <bottom>
+      <SplitPane dividerPositions="0.5016722408026756" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="refreshButton" layoutX="117.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleRefreshAction" text="refresh" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="125.0" prefWidth="294.0">
+               <children>
+                  <Button fx:id="cancelButton" layoutX="116.0" layoutY="67.0" mnemonicParsing="false" onAction="#handleCancelAction" text="cancel" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <top>
+      <SplitPane dividerPositions="0.5" prefHeight="89.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Text fx:id="yourChar" layoutX="46.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Twój znak" wrappingWidth="215.7294921875" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Text fx:id="competitorName" layoutX="13.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Login)" wrappingWidth="89.7294921875" />
+                  <Text fx:id="competitorChar1" layoutX="62.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="znak przeciwnika;" wrappingWidth="215.7294921875" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <center>
+      <Pane prefHeight="385.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="b1" layoutX="142.0" layoutY="57.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="x">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b2" layoutX="253.0" layoutY="57.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="o">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b3" layoutX="364.0" layoutY="58.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="x">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b4" layoutX="142.0" layoutY="148.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="o">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b5" layoutX="253.0" layoutY="148.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="x">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b6" layoutX="364.0" layoutY="148.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="o">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Button>
+            <Button fx:id="b7" layoutX="143.0" layoutY="238.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="x">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b8" layoutX="254.0" layoutY="238.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="o">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="b9" layoutX="365.0" layoutY="238.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="111.0" text="o">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="readyButton" layoutX="247.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleReadyAction" prefHeight="25.0" prefWidth="110.0" text="ready" />
+            <Button fx:id="undoButton" layoutX="37.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleUndoAction" text="undo" />
+            <Text fx:id="winner" fill="RED" layoutX="9.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WYGRANA!" textAlignment="CENTER" wrappingWidth="577.7294921875">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
